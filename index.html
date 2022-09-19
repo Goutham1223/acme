@@ -740,6 +740,27 @@
     "title": "My Page - Admin"
   }
 }
+curl -X POST \
+  https://app.pendo.io/data/track \
+  -H 'x-2e29e0fc-e59e-4571-4f1c-0f4b9550c8c6
+: 4fef9c65-c3e3-4ee5-486f-0e210f5329a4' \
+  -d '{
+  "type": "track",
+  "event": "Registered",
+  "visitorId": "unique-string-id",
+  "accountId": "account-id-of-visitor",
+  "timestamp": 1524069206000,
+  "properties": {
+    "plan": "Pro Annual",
+    "accountType" : "Facebook"
+  },
+  "context": {
+    "ip": "76.253.187.23",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36",
+    "url": "https://mypage.com/admin",
+    "title": "My Page - Admin"
+  }
+}'
         });
 
 })('5ba2118f-b462-47f9-66eb-e0eeddbf109d');
